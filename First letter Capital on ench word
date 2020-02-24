@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void strrevx(char *src)
+{
+	while (*src != '\0')
+	{
+		if (*src >= 'a' && *src <= 'z')
+		{
+			*src = *src - 32;
+		}
+		src++;
+		while (*src != ' ')
+		{
+			src++;
+			if (*src == '\0')
+			{
+				break;
+			}
+		}
+		src++;
+	}
+}
+int main()
+{
+	char arr[50]= { "marvellous infosystem multi os" };
+	int iret = 0;
+
+	strrevx(arr);
+	printf("%s\n",arr);
+
+	getch();
+	return 0;
+}
